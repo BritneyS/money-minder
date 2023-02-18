@@ -3,7 +3,15 @@ Packages
 xcuserdata
 *.xcodeproj
 DerivedData/
+Package.resolved
 .DS_Store
 db.sqlite
 .swiftpm
+Tests/LinuxMain.swift
+.vscode
 .env
+
+# API Docs Generation
+generate-package-api-docs.swift
+public/
+theme-settings.json
