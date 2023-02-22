@@ -1,7 +1,9 @@
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.get("accounts") { req -> [Account] in
-        return Accounts
-    }
+    let accountsController = AccountsController()
+    
+    app.get("accounts", use: accountsController.getAllHandler)
+    
+    try app.register(collection: accountsController)
 }
