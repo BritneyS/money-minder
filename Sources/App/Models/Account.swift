@@ -7,10 +7,14 @@ enum AccountType: String, Content {
     case highInterestSavings = "high interest savings"
 }
 
-
 struct Account: Content {
-    var id: String
-    var type: AccountType
-    var balance: Int
+    let id: String
+    let type: AccountType
+    let balance: Int
 }
+
+struct AccountListResponse: Content {
+    let accounts: [Account]
+}
+
 

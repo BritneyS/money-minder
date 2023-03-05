@@ -5,9 +5,8 @@ struct AccountsController: RouteCollection {
         routes.get(AccountEndpoints.accounts.path, use: list)
     }
     
-    func list(_ req: Request) -> [Account] {
-        print(AccountEndpoints.accounts.path)
-        return Accounts
+    func list(_ req: Request) -> AccountListResponse {
+        return AccountListResponse(accounts: Accounts)
     }
 
 }
